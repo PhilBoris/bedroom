@@ -1,12 +1,41 @@
 <!doctype html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>bedroom</title>
+
+    <!-- Permissions caméra + audio -->
+    <meta http-equiv="Permissions-Policy" content="camera=*, microphone=*, geolocation=*" />
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin" />
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp" />
+
+    <!-- iOS et Android : plein écran -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="/manifest.json" />
+
   </head>
-  <body>
+
+  <body style="margin:0; background:#000; overflow:hidden;">
     <div id="root"></div>
+
+    <!-- Fix iOS : débloquer l'audio au premier tap -->
+    <script>
+      document.addEventListener("touchstart", () => {
+        try {
+          const AudioContext =
+            window.AudioContext || window.webkitAudioContext;
+          const ctx = new AudioContext();
+          if (ctx.state === "suspended") ctx.resume();
+        } catch (_) {}
+      });
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
