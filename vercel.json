@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {
+=======
+﻿{
+>>>>>>> eddc770 (Save local changes before rebase)
   "framework": "vite",
   "buildCommand": "npm run build",
   "installCommand": "npm install",
