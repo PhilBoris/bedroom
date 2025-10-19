@@ -1,5 +1,6 @@
 #!/bin/bash
-# Build script compatible avec Vercel et Windows
+set -e
 
 echo "🚀 Running manual Vite build..."
-npx vite build --force
+npm install
+npm run build
