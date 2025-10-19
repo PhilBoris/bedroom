@@ -1,5 +1,13 @@
 {
-  "buildCommand": "./build.sh",
+  "version": 2,
+  "buildCommand": "bash build.sh",
   "outputDirectory": "dist",
-  "framework": "vite"
+  "framework": "vite",
+  "builds": [
+    {
+      "src": "build.sh",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ]
 }
