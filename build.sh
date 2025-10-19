@@ -1,6 +1,10 @@
 #!/bin/bash
-set -e
+# 🚀 Script de build pour Vercel (React + Vite)
 
-echo "🚀 Running manual Vite build..."
+echo "🔧 Installation des dépendances..."
 npm install
+
+echo "🏗️ Lancement du build Vite..."
 npm run build
+
+echo "✅ Build terminée !"
