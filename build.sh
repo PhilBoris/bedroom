@@ -1,8 +1,1 @@
-#!/bin/bash
-echo "🔧 Installation des dépendances..."
-npm install
-
-echo "🏗️ Lancement du build Vite..."
-npx vite build
-
-echo "✅ Build terminée !"
+﻿#!/bin/bashecho "ðŸ”§ Installation des dÃ©pendances..."npm installecho "ðŸ—ï¸ Lancement du build Vite..."npx vite buildecho "âœ… Build terminÃ©e !"
