@@ -1,1 +1,9 @@
-﻿#!/bin/bashecho "ðŸ”§ Installation des dÃ©pendances..."npm installecho "ðŸ—ï¸ Lancement du build Vite..."npx vite buildecho "âœ… Build terminÃ©e !"
+#!/bin/bash
+
+echo "ðŸ”§ Installation des dÃ©pendances..."
+npm install
+
+echo "ðŸ—ï¸ Lancement du build Vite..."
+npx vite build
+
+echo "âœ… Build terminÃ©e !"
